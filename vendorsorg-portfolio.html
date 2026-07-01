@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vendorsorg — Product &amp; Influencer Marketing, Assam</title>
+<meta name="description" content="Vendorsorg is a product &amp; influencer marketing agency based in Assam, connecting brands with authentic audiences across Northeast India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,wght@1,400;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#142621;
+    --ink-soft:#1f342e;
+    --paper:#f3efe2;
+    --paper-deep:#e8e2cd;
+    --teal:#1f4b44;
+    --gold:#c6963c;
+    --gold-soft:#e0c48c;
+    --river:#3f6e82;
+    --muted:#5f6f65;
+    --muted-on-ink:#a9bdb2;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms!important;animation-iteration-count:1!important;transition-duration:0.001ms!important;}
+  }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.disp{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:-0.01em;margin:0;}
+  .accent{font-family:'Fraunces',serif;font-style:italic;font-weight:400;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  p{line-height:1.65;color:var(--muted);margin:0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px;}
+  @media (max-width:640px){.wrap{padding:0 20px;}}
+
+  /* ---- header ---- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(243,239,226,0.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(20,38,33,0.08);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:var(--max);margin:0 auto;}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;}
+  .logo .dot{color:var(--gold);}
+  nav ul{list-style:none;display:flex;gap:30px;margin:0;padding:0;}
+  nav ul a{font-size:14px;text-decoration:none;color:var(--ink);opacity:0.75;transition:opacity .2s;}
+  nav ul a:hover{opacity:1;}
+  .nav-cta{
+    font-family:'JetBrains Mono',monospace;font-size:12.5px;text-decoration:none;
+    background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:999px;
+    letter-spacing:0.02em;white-space:nowrap;
+  }
+  .navlinks,.nav-cta{display:none;}
+  @media (min-width:860px){.navlinks{display:flex;}.nav-cta{display:inline-block;}}
+  .menu-btn{display:block;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink);}
+  @media (min-width:860px){.menu-btn{display:none;}}
+  #mobile-panel{display:none;flex-direction:column;gap:16px;padding:0 32px 24px;}
+  #mobile-panel.open{display:flex;}
+  #mobile-panel a{text-decoration:none;color:var(--ink);font-size:15px;}
+
+  /* ---- river thread (signature element) ---- */
+  .river-rail{
+    position:fixed;top:0;bottom:0;left:38px;width:2px;z-index:1;
+    background:linear-gradient(to bottom, var(--teal), var(--river) 45%, var(--gold) 100%);
+    opacity:0.35;
+  }
+  @media (max-width:900px){.river-rail{display:none;}}
+
+  section{position:relative;padding:110px 0 40px;}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.14em;
+    text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:12px;margin-bottom:18px;
+  }
+  .eyebrow .node{width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none;box-shadow:0 0 0 4px rgba(198,150,60,0.18);}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---- gamosa divider (woven-border motif, subtle) ---- */
+  .gamosa{
+    height:14px;
+    background:
+      repeating-linear-gradient(45deg, var(--gold) 0 3px, transparent 3px 12px),
+      repeating-linear-gradient(-45deg, var(--gold) 0 3px, transparent 3px 12px);
+    background-color:var(--paper-deep);
+    opacity:0.55;
+    margin:0;
+  }
+
+  /* ---- hero ---- */
+  #hero{padding-top:170px;padding-bottom:70px;}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  .hero-headline{font-size:clamp(38px,6.4vw,74px);line-height:1.03;max-width:16ch;}
+  .hero-headline .accent{font-size:0.62em;display:block;color:var(--teal);}
+  .hero-sub{max-width:52ch;margin-top:22px;font-size:17px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
+  .btn{
+    font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.02em;
+    text-decoration:none;padding:14px 24px;border-radius:999px;display:inline-block;
+    transition:transform .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-solid{background:var(--ink);color:var(--paper);}
+  .btn-outline{border:1.5px solid var(--ink);color:var(--ink);}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px;max-width:640px;}
+  .stat{border-top:1.5px solid rgba(20,38,33,0.18);padding-top:12px;}
+  .stat b{font-family:'Space Grotesk',sans-serif;font-size:28px;display:block;}
+  .stat span{font-size:12.5px;color:var(--muted);}
+  .hero-tag{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:44px;}
+  .hero-tag .pin{width:6px;height:6px;background:var(--river);border-radius:50%;}
+
+  /* ---- two-col generic ---- */
+  .split{display:grid;grid-template-columns:1fr;gap:44px;}
+  @media (min-width:860px){.split{grid-template-columns:1fr 1fr;}}
+  .card{background:var(--paper-deep);border-radius:18px;padding:26px 28px;}
+  .card h3{font-size:17px;margin-bottom:8px;}
+  .card p{font-size:14.5px;}
+  .pillar-list{display:flex;flex-direction:column;gap:16px;margin-top:26px;}
+
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(28px,4vw,42px);line-height:1.08;}
+
+  /* ---- challenge / solution panels ---- */
+  .cs-grid{display:grid;grid-template-columns:1fr;gap:0;border-radius:22px;overflow:hidden;}
+  @media (min-width:860px){.cs-grid{grid-template-columns:1fr 1fr;}}
+  .panel{padding:40px 34px;}
+  .panel.dark{background:var(--ink);color:var(--paper);}
+  .panel.dark p{color:var(--muted-on-ink);}
+  .panel.light{background:var(--paper-deep);}
+  .panel h3{font-size:22px;margin-bottom:16px;}
+  .panel .tag{font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.6;display:block;margin-bottom:10px;}
+  .panel ul{margin:18px 0 0;padding-left:18px;}
+  .panel li{margin-bottom:8px;font-size:14.5px;color:inherit;}
+  .panel.dark li{color:var(--muted-on-ink);}
+  .panel.light li{color:var(--muted);}
+
+  /* ---- services ---- */
+  .services-grid{display:grid;grid-template-columns:1fr;gap:22px;}
+  @media (min-width:760px){.services-grid{grid-template-columns:repeat(3,1fr);}}
+  .service-card{border:1.5px solid rgba(20,38,33,0.15);border-radius:18px;padding:28px 24px;background:var(--paper);}
+  .service-card h3{font-size:16.5px;margin-bottom:14px;color:var(--teal);}
+  .service-card ul{margin:0;padding-left:18px;}
+  .service-card li{font-size:14px;color:var(--muted);margin-bottom:8px;}
+
+  /* ---- market stats ---- */
+  .market-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media (min-width:760px){.market-grid{grid-template-columns:repeat(3,1fr);}}
+  .market-card{background:var(--teal);color:var(--paper);border-radius:18px;padding:30px 26px;}
+  .market-card b{font-family:'Space Grotesk',sans-serif;font-size:38px;display:block;color:var(--gold-soft);}
+  .market-card span{font-size:13.5px;color:var(--muted-on-ink);display:block;margin-top:6px;}
+  .platform-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:12px;border:1px solid rgba(20,38,33,0.2);border-radius:999px;padding:8px 16px;color:var(--muted);}
+
+  /* ---- steps (trend/gap/edge) ---- */
+  .steps{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--paper-deep);margin-top:8px;}
+  .step{padding:18px 0 18px 26px;position:relative;}
+  .step::before{content:'';position:absolute;left:-6.5px;top:24px;width:11px;height:11px;border-radius:50%;background:var(--gold);}
+  .step h4{font-size:15.5px;font-family:'Space Grotesk',sans-serif;margin-bottom:6px;}
+  .step p{font-size:14.5px;}
+  .industry-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+
+  /* ---- team ---- */
+  .team-grid{display:grid;grid-template-columns:1fr;gap:20px;}
+  @media (min-width:760px){.team-grid{grid-template-columns:repeat(3,1fr);}}
+  .team-card{padding:26px 24px;border-radius:18px;background:var(--paper-deep);}
+  .team-card .role{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--river);}
+  .team-card h3{font-size:19px;margin:8px 0 10px;}
+  .team-card p{font-size:14px;}
+
+  /* ---- why choose us ---- */
+  .why-grid{display:grid;grid-template-columns:1fr;gap:2px;background:rgba(20,38,33,0.12);border-radius:18px;overflow:hidden;}
+  @media (min-width:760px){.why-grid{grid-template-columns:1fr 1fr;}}
+  .why-item{background:var(--paper);padding:28px 26px;}
+  .why-item .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--gold);text-transform:uppercase;}
+  .why-item h3{font-size:17px;margin:8px 0 8px;}
+  .why-item p{font-size:14px;}
+
+  /* ---- contact / footer ---- */
+  #contact{background:var(--ink);color:var(--paper);border-radius:26px 26px 0 0;margin-top:20px;padding:90px 0 40px;}
+  #contact .section-head h2{color:var(--paper);}
+  #contact .eyebrow{color:var(--gold-soft);}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:10px;}
+  @media (min-width:760px){.contact-grid{grid-template-columns:repeat(2,1fr);}}
+  .contact-item{border-top:1px solid rgba(243,239,226,0.16);padding-top:16px;}
+  .contact-item .label{font-family:'JetBrains Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted-on-ink);}
+  .contact-item a, .contact-item span.val{font-size:19px;font-family:'Space Grotesk',sans-serif;text-decoration:none;display:block;margin-top:6px;}
+  .contact-cta{margin-top:56px;}
+  .contact-cta .accent{font-size:clamp(30px,5vw,52px);color:var(--gold-soft);display:block;max-width:14ch;}
+  footer.bottom{margin-top:70px;padding-top:22px;border-top:1px solid rgba(243,239,226,0.16);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--muted-on-ink);font-family:'JetBrains Mono',monospace;}
+</style>
+</head>
+<body>
+
+<div class="river-rail" aria-hidden="true"></div>
+
+<header>
+  <div class="nav">
+    <div class="logo">Vendorsorg<span class="dot">.</span></div>
+    <ul class="navlinks">
+      <li><a href="#vision">Vision</a></li>
+      <li><a href="#solution">Approach</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#market">Market</a></li>
+      <li><a href="#team">Team</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact">Start a conversation →</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+  </div>
+  <div id="mobile-panel">
+    <a href="#vision">Vision</a>
+    <a href="#solution">Approach</a>
+    <a href="#services">Services</a>
+    <a href="#market">Market</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Start a conversation →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="node"></span>Portfolio — 2026 — Assam, Northeast India</div>
+    <h1 class="hero-headline">Connecting brands with <span class="accent">audiences that actually care.</span></h1>
+    <p class="hero-sub">Vendorsorg is a product &amp; influencer marketing agency based in Assam. We bridge brands and consumers through authentic influencer partnerships, creative storytelling, and deep regional market expertise — built for Northeast India's fast-growing digital audience.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#contact">Let's talk about your brand</a>
+      <a class="btn btn-outline" href="#services">See what we do</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b data-count="35">0</b><span>million+ people across the region</span></div>
+      <div class="stat"><b data-count="40">0</b><span>% YoY social media growth</span></div>
+      <div class="stat"><b data-count="60">0</b><span>% of the audience under 35</span></div>
+    </div>
+    <div class="hero-tag"><span class="pin"></span>Vendorsorg Marketing Team · Assam, India</div>
+  </div>
+</section>
+
+<div class="gamosa"></div>
+
+<!-- VISION + MISSION -->
+<section id="vision">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="node"></span>Vision &amp; Mission</div>
+    <div class="split">
+      <div class="reveal">
+        <h2 style="font-size:clamp(24px,3.4vw,34px);line-height:1.15;">Leading the future of <span class="accent">community commerce</span> in Northeast India.</h2>
+        <p style="margin-top:18px;font-size:15.5px;">To become the definitive digital pulse of our community — where every local business is visible, every local service is accessible, and community commerce thrives seamlessly.</p>
+      </div>
+      <div class="reveal">
+        <p style="font-size:15px;">To empower local brands with cutting-edge digital reach, high-converting creative services, and a direct pipeline to the local consumer market — fostering sustainable economic growth within the community.</p>
+        <div class="pillar-list">
+          <div class="card"><h3>Measurable Results</h3><p>Real, trackable outcomes for every brand we partner with — from reach and engagement to conversions and revenue growth.</p></div>
+          <div class="card"><h3>Authentic Storytelling</h3><p>Genuine narratives through trusted local influencers, creating content that resonates deeply with Assam's diverse communities.</p></div>
+          <div class="card"><h3>Lasting Relationships</h3><p>Enduring brand-community connections that go beyond campaigns, fostering loyalty and long-term consumer trust.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGE / SOLUTION -->
+<section id="solution">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>The Problem, and How We Solve It</div>
+      <h2>Most regional brands spend on visibility — not on authenticity.</h2>
+    </div>
+    <div class="cs-grid reveal">
+      <div class="panel dark">
+        <span class="tag">The Challenge</span>
+        <h3>Fake reach, real losses.</h3>
+        <p>Brands in Assam struggle to reach genuine, high-intent consumers. Bots, irrelevant audiences, and wasted ad budgets are common — visibility without verified engagement.</p>
+        <ul>
+          <li>Finding authentic, ready-to-convert consumers</li>
+          <li>Cutting through noise in a crowded feed</li>
+          <li>Connecting spend to real, local outcomes</li>
+        </ul>
+      </div>
+      <div class="panel light">
+        <span class="tag">Our Solution</span>
+        <h3>End-to-end influencer marketing, built for this region.</h3>
+        <p>We blend local Assam market expertise with national reach — full-cycle campaign management from discovery and vetting to execution, reporting, and optimization, all under one roof.</p>
+        <ul>
+          <li>Local expertise, national reach</li>
+          <li>Data-driven campaigns designed for ROI</li>
+          <li>Authentic content, strategically positioned</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gamosa"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>Services We Provide</div>
+      <h2>A full suite, so your brand meets the right audience at the right time.</h2>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <h3>Campaign &amp; Strategy</h3>
+        <ul>
+          <li>Influencer marketing campaigns</li>
+          <li>Product launch strategies</li>
+          <li>Campaign strategy &amp; planning</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Content &amp; Social Media</h3>
+        <ul>
+          <li>Social media management</li>
+          <li>Content creation &amp; curation</li>
+          <li>Brand partnerships &amp; collaborations</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Analytics &amp; Insights</h3>
+        <ul>
+          <li>Performance analytics &amp; reporting</li>
+          <li>Market research &amp; consumer insights</li>
+          <li>ROI tracking &amp; optimization</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section id="market">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>The Assam Market</div>
+      <h2>A fast-growing digital landscape, still underserved by generic national platforms.</h2>
+    </div>
+    <div class="market-grid reveal">
+      <div class="market-card"><b data-count="35" data-suffix="M+">0</b><span>People across Assam, with rapidly rising internet penetration in urban and rural areas alike.</span></div>
+      <div class="market-card"><b data-count="40" data-suffix="%">0</b><span>Year-on-year growth in the social media user base, driven by affordable smartphones and 4G/5G.</span></div>
+      <div class="market-card"><b data-count="60" data-suffix="%">0</b><span>Of the population is under 35 — digitally active, brand-aware, and responsive to local influencer content.</span></div>
+    </div>
+    <p style="margin-top:26px;max-width:60ch;font-size:15px;">Consumers strongly prefer regional-language content and local influencers, offering brands a unique, high-trust engagement opportunity that national campaigns typically miss.</p>
+    <div class="platform-row">
+      <span class="chip">Instagram</span><span class="chip">Facebook</span><span class="chip">YouTube</span><span class="chip">Short-video (post-TikTok)</span>
+    </div>
+  </div>
+</section>
+
+<div class="gamosa"></div>
+
+<!-- MARKET ANALYSIS -->
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <div class="eyebrow"><span class="node"></span>Market Analysis &amp; Opportunity</div>
+        <h2 style="font-size:clamp(24px,3.4vw,32px);line-height:1.15;">Local consumers want to support local brands. <span class="accent">Convenience just tends to win.</span></h2>
+        <div class="steps">
+          <div class="step"><h4>The Trend</h4><p>Convenience-driven local search has grown fast — consumers lean on curated aggregators to decide where to eat, shop, and spend.</p></div>
+          <div class="step"><h4>The Gap</h4><p>Most local vendors are invisible online, or buried under generic national directories dominated by larger players.</p></div>
+          <div class="step"><h4>Our Edge</h4><p>We target a hyper-specific geographic radius, so ad spend and visibility aren't wasted outside your delivery or foot-traffic zone.</p></div>
+        </div>
+      </div>
+      <div class="reveal" style="align-self:start;">
+        <div class="card">
+          <h3>Key Industries</h3>
+          <p>Sectors primed for influencer-led brand growth in the region.</p>
+          <div class="industry-chips">
+            <span class="chip">Tea</span><span class="chip">Tourism</span><span class="chip">Textiles</span><span class="chip">Handicrafts</span><span class="chip">Education</span><span class="chip">FMCG</span>
+          </div>
+        </div>
+        <div class="card" style="margin-top:18px;">
+          <h3>Youth-Driven Market</h3>
+          <p>60% of the population is under 35 — digitally active, brand-aware, and highly responsive to local influencer content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>Our Creative Team</div>
+      <h2>An agile network of local specialists, not a bloated agency roster.</h2>
+      <p style="margin-top:14px;font-size:15px;">We partner with a handpicked network of elite local freelancers to keep overhead low — and pass those savings directly to you.</p>
+    </div>
+    <div class="team-grid reveal">
+      <div class="team-card"><span class="role">Content</span><h3>The Creators</h3><p>Scriptwriters, video editors, and reel creators who know exactly what content catches the local eye and goes viral in our community.</p></div>
+      <div class="team-card"><span class="role">Brand</span><h3>The Designers</h3><p>Visual architects who craft beautiful brand layouts, ensuring your business looks premium, modern, and trustworthy.</p></div>
+      <div class="team-card"><span class="role">On-ground</span><h3>The Ground Workers</h3><p>Our execution squad — managing event pop-ups, local community outreach, and direct B2C engagement.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="gamosa"></div>
+
+<!-- WHY CHOOSE US -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>Why Choose Us</div>
+      <h2>Local knowledge. National reach. One accountable team.</h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-item"><span class="tag">Local</span><h3>Unmatched regional knowledge</h3><p>Local market expertise combined with national reach — a deep read on Assam and Northeast India's consumer landscape.</p></div>
+      <div class="why-item"><span class="tag">Data</span><h3>Every campaign is measurable</h3><p>A data-driven approach ensures results — every campaign is tracked, optimized, and reported for maximum impact.</p></div>
+      <div class="why-item"><span class="tag">Story</span><h3>Authentic, not transactional</h3><p>Authentic influencer partnerships and creative storytelling build real, lasting brand-community relationships.</p></div>
+      <div class="why-item"><span class="tag">Team</span><h3>All under one roof</h3><p>A dedicated team with diverse skills — strategy, content, analytics, and client relations — working as one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="node"></span>Get In Touch</div>
+      <div class="contact-cta">
+        <h2 style="color:var(--paper);font-size:clamp(28px,5vw,44px);">Ready to elevate your brand in <span class="accent">Northeast India?</span></h2>
+        <p style="color:var(--muted-on-ink);max-width:56ch;margin-top:16px;font-size:15.5px;">Let's discuss your marketing needs and explore how Vendorsorg can drive real, measurable results for your business.</p>
+      </div>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-item"><span class="label">Mobile</span><a href="tel:+916900612832">+91 69006 12832</a></div>
+      <div class="contact-item"><span class="label">Email</span><a href="mailto:Vendorsorg@gmail.com">Vendorsorg@gmail.com</a></div>
+      <div class="contact-item"><span class="label">Social</span><span class="val">@Vendorsorg_marketing</span></div>
+      <div class="contact-item"><span class="label">Location</span><span class="val">Assam, India</span></div>
+    </div>
+    <footer class="bottom">
+      <span>Vendorsorg. — Product &amp; Influencer Marketing</span>
+      <span>Portfolio Presentation · 2026</span>
+    </footer>
+  </div>
+</section>
+
+<script>
+  // mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const panel = document.getElementById('mobile-panel');
+  menuBtn.addEventListener('click', () => panel.classList.toggle('open'));
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => panel.classList.remove('open')));
+
+  // scroll reveal
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach(el => el.classList.add('in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  // stat counters
+  const counters = document.querySelectorAll('[data-count]');
+  const animateCounter = (el) => {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const suffix = el.getAttribute('data-suffix') || (el.closest('.hero-stats') ? '' : '');
+    const heroSuffix = el.closest('.hero-stats') ? (target === 40 || target === 60 ? '%' : (target===35?'M+':'')) : suffix;
+    if (reduceMotion) { el.textContent = target + heroSuffix; return; }
+    let start = 0;
+    const dur = 1200;
+    const t0 = performance.now();
+    const step = (t) => {
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(eased * target) + heroSuffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { animateCounter(entry.target); counterIO.unobserve(entry.target); }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterIO.observe(c));
+</script>
+</body>
+</html>
