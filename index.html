@@ -208,11 +208,11 @@
   <div class="nav">
     <div class="logo">VendorsOrg<span class="dot">.</span></div>
     <ul class="navlinks">
-      <li><a href="#vision">Vision</a></li>
-      <li><a href="#solution">Approach</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#market">Market</a></li>
-      <li><a href="#team">Team</a></li>
+      <li><a href="#vision">Vision  </a></li>
+      <li><a href="#solution">Approach  </a></li>
+      <li><a href="#services">Services  </a></li>
+      <li><a href="#market">Market  </a></li>
+      <li><a href="#team">Team  </a></li>
     </ul>
     <a class="nav-cta" href="#contact">Start a conversation →</a>
     <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
@@ -470,7 +470,7 @@
   const animateCounter = (el) => {
     const target = parseInt(el.getAttribute('data-count'), 10);
     const suffix = el.getAttribute('data-suffix') || (el.closest('.hero-stats') ? '' : '');
-    const heroSuffix = el.closest('.hero-stats') ? (target === 40 || target === 60 ? '%' : (target===35?'M+':'')) : suffix;
+    const heroSuffix = el.closest('.hero-stats') ? (target === 40 || target === 60 ? '%' : (target===35?'K+':'')) : suffix;
     if (reduceMotion) { el.textContent = target + heroSuffix; return; }
     let start = 0;
     const dur = 1200;
